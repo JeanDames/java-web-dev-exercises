@@ -11,7 +11,7 @@ public class Alice {
 
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your search term: ");
-        String find = input.next();
+        String find = input.nextLine();
         boolean found = paragraph.toLowerCase().contains(find.toLowerCase());
         input.close();
 
