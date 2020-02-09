@@ -9,13 +9,20 @@ public class HouseCat extends Cat {
         name = aName;
     }
 
+
     public boolean isSatisfied() {
         return !isHungry() && !isTired();
     }
 
     @Override
     public String noise() {
-        return "Hello, my name is " + name + "!";
+        String result;
+        if (isSatisfied()) {
+            result = "Hello, my name is " + name + "!";
+        } else {
+            result = "meeeowwww!";
+        }
+        return result;
     }
 
     public String purr() {
